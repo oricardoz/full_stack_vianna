@@ -1,0 +1,6 @@
+C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana13\ef\obj\Debug\net8.0\ef.csproj.AssemblyReference.cache
+C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana13\ef\obj\Debug\net8.0\ef.GeneratedMSBuildEditorConfig.editorconfig
+C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana13\ef\obj\Debug\net8.0\ef.AssemblyInfoInputs.cache
+C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana13\ef\obj\Debug\net8.0\ef.AssemblyInfo.cs
+C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana13\ef\obj\Debug\net8.0\ef.csproj.CoreCompileInputs.cache
+C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana13\ef\obj\Debug\net8.0\ef.sourcelink.json
