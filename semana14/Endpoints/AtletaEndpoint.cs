@@ -1,5 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
+using semana12.Dtos;
 using semana12.Infra;
 using semana12.Models;
 
@@ -26,42 +27,42 @@ public static class AtletaEndpoint
 
     private static async Task<IResult> GetAsync(AtletaContext db)
     {
-        return TypedResults.Ok(await db.Atletas.ToListAsync()); 
+        var objetos = await db.Atletas.ToListAsync();
+        return TypedResults.Ok(objetos.Select(x => new AtletaDTO(x))); 
     }
 
-    private static async Task<IResult> GetByIdAsync(long id, AtletaContext db)
+    private static async Task<IResult> GetByIdAsync(string id, AtletaContext db)
     {
-        var obj = await db.Atletas.FindAsync(id);
+        var obj = await db.Atletas.FindAsync(Convert.ToInt64(id));
 
         if(obj == null)
             return TypedResults.NotFound();
 
-        return TypedResults.Ok(obj); 
+        return TypedResults.Ok(new AtletaDTO(obj)); 
     }
 
-    private static async Task<IResult> PostAsync(Atleta obj, AtletaContext db)
+    private static async Task<IResult> PostAsync(AtletaDTO dto, AtletaContext db)
     {
+        Atleta obj = dto.GetModel();
         obj.Id =  GeradorId.GetId();
         await db.Atletas.AddAsync(obj);
         await db.SaveChangesAsync();
 
-        return TypedResults.Created($"atletas/{obj.Id}", obj);
+        return TypedResults.Created($"atletas/{obj.Id}", new AtletaDTO(obj));
 
     }
 
-    private static async Task<IResult> PutAsync(long id, Atleta objNovo, AtletaContext db)
+    private static async Task<IResult> PutAsync(string id, AtletaDTO dto, AtletaContext db)
     {
-        if(id != objNovo.Id)
+        if(id != dto.Id)
             return TypedResults.BadRequest();
 
-        var obj = await db.Atletas.FindAsync(id);
+        var obj = await db.Atletas.FindAsync(Convert.ToInt64(id));
 
         if(obj == null)
             return TypedResults.NotFound();
 
-        obj.Nome = objNovo.Nome;
-        obj.Altura = objNovo.Altura;
-        obj.Peso = objNovo.Peso;
+        dto.PreencherModel(obj);
 
         db.Update(obj);
         await db.SaveChangesAsync();
@@ -69,9 +70,9 @@ public static class AtletaEndpoint
         return TypedResults.NoContent();
     }
 
-    private static async Task<IResult> DeleteAsync(long id,AtletaContext db)
+    private static async Task<IResult> DeleteAsync(string id,AtletaContext db)
     {
-        var obj = await db.Atletas.FindAsync(id);
+        var obj = await db.Atletas.FindAsync(Convert.ToInt64(id));
 
         if(obj == null)
             return TypedResults.NotFound();
