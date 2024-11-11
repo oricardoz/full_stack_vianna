@@ -13,11 +13,14 @@ public static class AtletaEndpoint
 
     public static void AdicionarAtletasEndpoint(this WebApplication app)
     {
-        app.MapGet("/atletas", Get );
-        app.MapGet("/atletas/{Id}", GetById );
-        app.MapPost("/atletas", Post );
-        app.MapDelete("/atletas/{Id}", Delete );
-        app.MapPut("/atletas/{Id}", Put );
+        var grupo = app.MapGroup("/atletas");
+
+
+        grupo.MapGet("/", Get );
+        grupo.MapGet("/{Id}", GetById );
+        grupo.MapPost("/", Post );
+        grupo.MapDelete("/{Id}", Delete );
+        grupo.MapPut("/{Id}", Put );
     }
 
     private static IResult Get(AtletaContext db)
