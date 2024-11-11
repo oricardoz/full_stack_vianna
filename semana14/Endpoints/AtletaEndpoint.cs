@@ -8,7 +8,7 @@ public static class AtletaEndpoint
 {
     static AtletaEndpoint()
     {
-        objetos = [];
+
     }
 
     public static void AdicionarAtletasEndpoint(this WebApplication app)
@@ -37,7 +37,7 @@ public static class AtletaEndpoint
 
     private static IResult Post(Atleta obj, AtletaContext db)
     {
-        obj.Id =  1;
+        obj.Id =  GeradorId.GetId();
         db.Atletas.Add(obj);
         db.SaveChanges();
 
@@ -67,7 +67,7 @@ public static class AtletaEndpoint
 
     private static IResult Delete(long id,AtletaContext db)
     {
-        var obj = db.Atletas.Find(x => x.Id == id);
+        var obj = db.Atletas.Find(id);
 
         if(obj == null)
             return TypedResults.NotFound();

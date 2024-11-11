@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HvteakDIdfU=",
+  "dgSpecHash": "lAEYbJN0TeU=",
   "success": true,
   "projectFilePath": "C:\\Arquivos Faculdade\\Dependencias\\FullStack\\full_stack_vianna\\semana14\\semana12.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Ricardo\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Ricardo\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\Ricardo\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\snowflakegenerator\\2.0.0\\snowflakegenerator.2.0.0.nupkg.sha512",
     "C:\\Users\\Ricardo\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Ricardo\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\Ricardo\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",

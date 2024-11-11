@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+            "SnowflakeGenerator": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.9.0, )"
