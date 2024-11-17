@@ -16,7 +16,7 @@ public static class UsuarioEndpoint
 
     public static void AdicionarUsuarioEndpoint(this WebApplication app)
     {
-        var grupo = app.MapGroup("/usuarios");
+        var grupo = app.MapGroup("/usuarios").RequireAuthorization();
 
 
         grupo.MapGet("/", GetAsync );
@@ -25,7 +25,7 @@ public static class UsuarioEndpoint
         grupo.MapPost("/admin", PostAsyncAdmin );
         grupo.MapDelete("/{Id}", DeleteAsync );
         grupo.MapPut("/{Id}", PutAsync );
-        grupo.MapPatch("/{Id}/{SenhaAnterior}/{SenhaNova    }", PatchAlteraSenhaAsync);
+        grupo.MapPatch("/{Id}/{SenhaAnterior}/{SenhaNova}", PatchAlteraSenhaAsync);
     }
 
     private static async Task<IResult> GetAsync(AtletaContext db)

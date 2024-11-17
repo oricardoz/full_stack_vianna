@@ -15,7 +15,7 @@ public static class AtletaEndpoint
 
     public static void AdicionarAtletasEndpoint(this WebApplication app)
     {
-        var grupo = app.MapGroup("/atletas");
+        var grupo = app.MapGroup("/atletas").RequireAuthorization();
 
 
         grupo.MapGet("/", GetAsync );
