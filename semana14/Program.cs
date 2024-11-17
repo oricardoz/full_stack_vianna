@@ -1,11 +1,14 @@
+using Microsoft.AspNetCore.Identity;
 using semana12.Endpoints;
 using semana12.Infra;
+using semana12.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AtletaContext>();
+builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
 
 builder.Services.AddCors();
 
@@ -26,5 +29,6 @@ app.UseCors(builder => builder
 app.UseHttpsRedirection();
 
 app.AdicionarAtletasEndpoint();
+app.AdicionarUsuarioEndpoint();
 
 app.Run();

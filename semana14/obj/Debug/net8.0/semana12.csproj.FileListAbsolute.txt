@@ -132,3 +132,4 @@ C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana14\bin\Debu
 C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana14\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana14\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana14\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Arquivos Faculdade\Dependencias\FullStack\full_stack_vianna\semana14\bin\Debug\net8.0\SnowflakeGenerator.dll

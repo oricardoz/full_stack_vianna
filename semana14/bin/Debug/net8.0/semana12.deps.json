@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
+          "SnowflakeGenerator": "2.0.0",
           "Swashbuckle.AspNetCore": "6.9.0"
         },
         "runtime": {
@@ -444,6 +445,14 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.1.1"
+          }
+        }
+      },
+      "SnowflakeGenerator/2.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/SnowflakeGenerator.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
           }
         }
       },
@@ -920,6 +929,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "SnowflakeGenerator/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8zZ8YmKmys2+inF+HDrqT0IHvoD9s4+j77EuTbUZCi+voT4in6zQAs3o8twGzbdRXfF1iFm/rHz1Tpv4f0ElAA==",
+      "path": "snowflakegenerator/2.0.0",
+      "hashPath": "snowflakegenerator.2.0.0.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "type": "package",
